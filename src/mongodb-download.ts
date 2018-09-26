@@ -590,6 +590,11 @@ export class MongoDBPlatform {
     } else if (major_version === 16) {
       // default for major 16 to 1604
       name += "1604";
+    } else if (os.release === "18.04") {
+      name += "1804";
+    } else if (major_version === 18) {
+      // default for major 18 to 1804
+      name += "1804";
     } else {
       // this needs to default to legacy release, this is a BUG
       this.debug("selecting default Ubuntu release 1404");
